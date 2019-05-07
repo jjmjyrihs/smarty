@@ -13,6 +13,6 @@ class Db_select extends Database
     
     public function get_account()
     {
-        return $this->db->query('SELECT * FROM account')->fetchAll(PDO::FETCH_ASSOC);
+        return $this->db->query('SELECT email FROM account')->fetchAll(PDO::FETCH_ASSOC);
     }
 }
