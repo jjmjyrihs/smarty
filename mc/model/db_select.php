@@ -9,6 +9,8 @@ class Db_select extends Database
         parent::__construct();
     }
 
+    /** 測試衝突 */
+    
     public function get_account()
     {
         return $this->db->query('SELECT email, name FROM account')->fetchAll(PDO::FETCH_ASSOC);
