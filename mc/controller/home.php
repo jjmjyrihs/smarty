@@ -24,7 +24,8 @@ class Home extends Admin
 
     public function index()
     {
-        $accounts = $this->get_account();        
+        $accounts = $this->get_account();
+        var_dump($accounts);
         $this->smarty->assign('accounts', $accounts);
         $this->smarty->display('../v/home/home.tpl');
     }
