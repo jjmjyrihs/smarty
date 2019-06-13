@@ -15,7 +15,7 @@
         <div class='insert-block' hidden>
             帳號<input type="text" name="email" /><br/>            
             密碼<input type="text" name="pwd" /><br/>
-            名sssss字<input type="text" name="name" /><br/>
+            名字名字名字名字名字名字名字<input type="text" name="name" /><br/>
             地址<input type="text" name="addr" /><br/>
             電話<input type="text" name="phone" /><br/>
             身分<input type="text" name="identity" value="1" /><br/>
