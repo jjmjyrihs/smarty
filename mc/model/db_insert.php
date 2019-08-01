@@ -11,7 +11,6 @@ class Db_insert extends Database
 
     public function insert_account($account)
     {
-
         $stmt = $this->db->prepare('INSERT INTO account VALUES (?, ?, ?, ?, ?, ?)');
         $result = $stmt->execute(array(
             $account->email,

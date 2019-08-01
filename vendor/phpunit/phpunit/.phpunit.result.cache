@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":184:{a:2:{s:7:"defects";a:2:{s:24:"Tests::testWithTaxAndTip";i:4;s:20:"Tests::testWithNoTip";i:3;}s:5:"times";a:2:{s:24:"Tests::testWithTaxAndTip";d:0.005;s:20:"Tests::testWithNoTip";d:0;}}}
