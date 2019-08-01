@@ -52,6 +52,9 @@ class Home extends Admin
 		$dir="/uploads/"; //設定檔案路徑
 		$zipname = "ttt.zip"; //輸出的zip檔名 (可自行修改)
 
+
+		// 我要測試Git
+
 		try {
 			$zip = new ZipArchive;
 			$zip->open($zipname, ZipArchive::CREATE);
