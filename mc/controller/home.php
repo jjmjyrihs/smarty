@@ -45,52 +45,22 @@ class Home extends Admin
 		// $f = new MessageFormatter('en_US', "ÄäÖöÜüßÀàÂâÇçÉéÈèÊêËëÔôŸÿÛûकीकऊक्न्य~!@#$%^&()_+}{,.;'[]=-");
 		// var_dump($f->format(array()));
 
-		// var_dump("ÄäÖöÜüßÀàÂâÇçÉéÈèÊêËëÔôŸÿÛûकीकऊक्न्य~!@#$%^&()_+}{,.;'[]=-");
-
-
-		/********設定路徑與壓縮檔名稱************/
-		$dir="/uploads/"; //設定檔案路徑
-		$zipname = "ttt.zip"; //輸出的zip檔名 (可自行修改)
-
-
-	
-		// 我要測試Git你媽的會衝突喔
-		
-		// 衝突瞭不起喔
-
-		// 我要測試用vim編輯啦幹
-
-		try {
-			$zip = new ZipArchive;
-			$zip->open($zipname, ZipArchive::CREATE);
-			$zip->addFile($dir.'123.jpg'); //添加檔案 (若有大量檔案可使用迴圈)
-			$zip->addFile($dir.'456.jpg');
-			$zip->close();
-		} catch (\Throwable $th) {
-			var_dump($th);
-		}
-
-
-
-
-		/********使用header命令php下載zip檔************/
-		header('Content-Type: application/zip');
-		header("Content-Disposition: attachment; filename='$zipname'");
-		header('Content-Length: ' . filesize($zipname));
-		header("Location: $zipname");
-
-
-
-		exit;
 
 		// $test = $this->callpy();
 
+		$a = 'a';
+
+		if (true || $b = $a) {
+			echo 'qq';
+		}
+
+		phpinfo();
 
 		$accounts = $this->get_account();
 
         $this->smarty->assign('accounts', $accounts);
-		// $this->smarty->display('../v/html/home/home.tpl');
-        $this->smarty->display('../v/html/home/test.tpl');
+		$this->smarty->display('../v/html/home/home.tpl');
+        // $this->smarty->display('../v/html/home/test.tpl');
 
 	}
 
@@ -157,6 +127,7 @@ class Home extends Admin
 
 		echo '<br><button>test</button>';
 	}
+
 
 
 

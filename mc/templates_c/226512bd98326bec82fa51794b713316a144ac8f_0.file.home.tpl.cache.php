@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2019-07-24 14:33:21
+/* Smarty version 3.1.34-dev-7, created on 2019-08-11 13:13:37
   from 'D:\wamp\www\smarty\v\html\home\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5d386c31e50223_02478835',
-  'has_nocache_code' => true,
+  'unifunc' => 'content_5d501481843615_64189970',
+  'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '226512bd98326bec82fa51794b713316a144ac8f' => 
     array (
       0 => 'D:\\wamp\\www\\smarty\\v\\html\\home\\home.tpl',
-      1 => 1563978800,
+      1 => 1565529215,
       2 => 'file',
     ),
   ),
@@ -20,15 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d386c31e50223_02478835 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '7742996195d386c31dded83_96177384';
+function content_5d501481843615_64189970 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '7272898685d501481808c82_14171115';
 ?>
+
 <html lang="zh-TW">
     <head>
+		<link rel="shortcut icon" href="" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 
-    <body>
+    <body >
 		<marquee direction="up" scrollamount="10" style="width: 310px;height: 300px" id="">
 			<a href="#"><span style="font-size:20px">南南東 南南東 南南東 南南東</span></a><br />
 			<a href="#"><span style="font-size:20px">南南東 南南東 南南東 南南東</span></a><br />
@@ -48,7 +50,7 @@ $_smarty_tpl->compiled->nocache_hash = '7742996195d386c31dded83_96177384';
         <div class='input-block-insert' hidden>
             帳號<input type="text" name="email" /><br/>
             密碼<input type="text" name="pwd" /><br/>
-            名字<input type="text" name="name" /><br/>
+            名字名字名字名字名字名字名字<input type="text" name="name" /><br/>
             地址<input type="text" name="addr" /><br/>
             電話<input type="text" name="phone" /><br/>
             身分<input type="text" name="identity" value="1" /><br/>
@@ -79,101 +81,99 @@ $_smarty_tpl->compiled->nocache_hash = '7742996195d386c31dded83_96177384';
  src="https://code.jquery.com/jquery-3.4.0.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="<?php echo '/*%%SmartyNocache:7742996195d386c31dded83_96177384%%*/<?php echo $_smarty_tpl->tpl_vars[\'admin\']->value;?>
-/*/%%SmartyNocache:7742996195d386c31dded83_96177384%%*/';?>
-v/js/jquery.blockUI.js"><?php echo '</script'; ?>
+ src="/v/js/jquery.blockUI.js"><?php echo '</script'; ?>
 >
 
 <?php echo '<script'; ?>
 >
 
-$(function(){
-    $(document).on('click', '.insert-account', function(){
-        action = 'insert_account';
+	$(function(){
+		$(document).on('click', '.insert-account', function(){
+			action = 'insert_account';
 
-        $.ajax({
-            url: 'home.php',
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: action,
-                email: $('input[name="email"]').val(),
-                pwd: $('input[name="pwd"]').val(),
-                name: $('input[name="name"]').val(),
-                addr: $('input[name="addr"]').val(),
-                phone: $('input[name="phone"]').val(),
-                identity: $('input[name="identity"]').val()
-            },
-            beforeSend:function(res){
-                //$.blockUI();
-            },
-            success: function(response) {
-                if (response) {
-                    alert('Insert success');
-                } else {
-                    alert('Insert fail');
-                }
-            },
-            complete: function(){
-                //$.unblockUI();
-            }
-        });
-    }).on('click', '.update-account', function(){
-        action = 'update_account';
+			$.ajax({
+				url: 'home.php',
+				method: 'post',
+				dataType: 'json',
+				data: {
+					action: action,
+					email: $('input[name="email"]').val(),
+					pwd: $('input[name="pwd"]').val(),
+					name: $('input[name="name"]').val(),
+					addr: $('input[name="addr"]').val(),
+					phone: $('input[name="phone"]').val(),
+					identity: $('input[name="identity"]').val()
+				},
+				beforeSend:function(res){
+					//$.blockUI();
+				},
+				success: function(response) {
+					if (response) {
+						alert('Insert success');
+					} else {
+						alert('Insert fail');
+					}
+				},
+				complete: function(){
+					//$.unblockUI();
+				}
+			});
+		}).on('click', '.update-account', function(){
+			action = 'update_account';
 
-        $.ajax({
-            url: 'home.php',
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: action,
-                email: $('.input-block-update input[name="email"]').val(),
-                pwd: $('.input-block-update input[name="pwd"]').val(),
-                name: $('.input-block-update input[name="name"]').val(),
-                addr: $('.input-block-update input[name="addr"]').val(),
-                phone: $('.input-block-update input[name="phone"]').val(),
-                identity: $('.input-block-update input[name="identity"]').val()
-            },
-            beforeSend:function(res){
-                $.blockUI();
-            },
-            success: function(response) {
-                if (response) {
-                    console.log('aa');
-                } else {
-                    alert('Insert fail');
-                }
-            },
-            complete: function(){
-                $.unblockUI();
-            }
-        });
-	}).on('click', '.show-input-insert', function(){
-        $(this).hide();
-        $(".input-block-insert").show();
-    }).on('click', '.show-input-update', function(){
-		$(this).hide();
-        $(".input-block-update").show();
-	}).on('click', '.ajax', function(){
-		action = 'get_ajax';
-        $.ajax({
-             url: 'home.php',
-			 method: 'post',
-             data: {
-                 action: action
-             },
-             dataType: 'html',
-			 success: function(res){
-				 $("#ajax").html(res);
-			 }
-		});
-    }).on('click', '#li_1', function() {
-		alert('www');
+			$.ajax({
+				url: 'home.php',
+				method: 'post',
+				dataType: 'json',
+				data: {
+					action: action,
+					email: $('.input-block-update input[name="email"]').val(),
+					pwd: $('.input-block-update input[name="pwd"]').val(),
+					name: $('.input-block-update input[name="name"]').val(),
+					addr: $('.input-block-update input[name="addr"]').val(),
+					phone: $('.input-block-update input[name="phone"]').val(),
+					identity: $('.input-block-update input[name="identity"]').val()
+				},
+				beforeSend:function(res){
+					$.blockUI();
+				},
+				success: function(response) {
+					if (response) {
+						console.log('aa');
+					} else {
+						alert('Insert fail');
+					}
+				},
+				complete: function(){
+					$.unblockUI();
+				}
+			});
+		}).on('click', '.show-input-insert', function(){
+			$(this).hide();
+			$(".input-block-insert").show();
+		}).on('click', '.show-input-update', function(){
+			$(this).hide();
+			$(".input-block-update").show();
+		}).on('click', '.ajax', function(){
+			action = 'get_ajax';
+			$.ajax({
+				url: 'home.php',
+				method: 'post',
+				data: {
+					action: action
+				},
+				dataType: 'html',
+				success: function(res){
+					$("#ajax").html(res);
+				}
+			});
+		}).on('click', '#li_1', function() {
+			alert('www');
+		})
+
+
+
 	})
-
-
-
-})
 
 <?php echo '</script'; ?>
 >

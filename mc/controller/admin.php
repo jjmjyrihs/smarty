@@ -12,10 +12,7 @@ class Admin
      * @var
      */
     protected $smarty;
-    /**
-     * @var
-     */
-    protected $admin = 'http://smarty.dev.test/';
+
     /**
      * @var
      */
@@ -32,7 +29,7 @@ class Admin
         $this->update = new Db_update;
         $this->smarty = new Smarty;
         $this->smarty->caching = true;
-        $this->smarty->assign("admin", $this->admin, true);
+        $this->smarty->assign("admin", '59.127.67.75', true);
     }
 
 

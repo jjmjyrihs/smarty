@@ -1,10 +1,11 @@
+
 <html lang="zh-TW">
     <head>
-		<link rel="shortcut icon" href="#" />
+		<link rel="shortcut icon" href="" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 
-    <body>
+    <body >
 		<marquee direction="up" scrollamount="10" style="width: 310px;height: 300px" id="">
 			<a href="#"><span style="font-size:20px">南南東 南南東 南南東 南南東</span></a><br />
 			<a href="#"><span style="font-size:20px">南南東 南南東 南南東 南南東</span></a><br />
@@ -52,96 +53,96 @@
 </html>
 
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-<script src="{$admin}v/js/jquery.blockUI.js"></script>
+<script src="/v/js/jquery.blockUI.js"></script>
 
 <script>
 
-$(function(){
-    $(document).on('click', '.insert-account', function(){
-        action = 'insert_account';
+	$(function(){
+		$(document).on('click', '.insert-account', function(){
+			action = 'insert_account';
 
-        $.ajax({
-            url: 'home.php',
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: action,
-                email: $('input[name="email"]').val(),
-                pwd: $('input[name="pwd"]').val(),
-                name: $('input[name="name"]').val(),
-                addr: $('input[name="addr"]').val(),
-                phone: $('input[name="phone"]').val(),
-                identity: $('input[name="identity"]').val()
-            },
-            beforeSend:function(res){
-                //$.blockUI();
-            },
-            success: function(response) {
-                if (response) {
-                    alert('Insert success');
-                } else {
-                    alert('Insert fail');
-                }
-            },
-            complete: function(){
-                //$.unblockUI();
-            }
-        });
-    }).on('click', '.update-account', function(){
-        action = 'update_account';
+			$.ajax({
+				url: 'home.php',
+				method: 'post',
+				dataType: 'json',
+				data: {
+					action: action,
+					email: $('input[name="email"]').val(),
+					pwd: $('input[name="pwd"]').val(),
+					name: $('input[name="name"]').val(),
+					addr: $('input[name="addr"]').val(),
+					phone: $('input[name="phone"]').val(),
+					identity: $('input[name="identity"]').val()
+				},
+				beforeSend:function(res){
+					//$.blockUI();
+				},
+				success: function(response) {
+					if (response) {
+						alert('Insert success');
+					} else {
+						alert('Insert fail');
+					}
+				},
+				complete: function(){
+					//$.unblockUI();
+				}
+			});
+		}).on('click', '.update-account', function(){
+			action = 'update_account';
 
-        $.ajax({
-            url: 'home.php',
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: action,
-                email: $('.input-block-update input[name="email"]').val(),
-                pwd: $('.input-block-update input[name="pwd"]').val(),
-                name: $('.input-block-update input[name="name"]').val(),
-                addr: $('.input-block-update input[name="addr"]').val(),
-                phone: $('.input-block-update input[name="phone"]').val(),
-                identity: $('.input-block-update input[name="identity"]').val()
-            },
-            beforeSend:function(res){
-                $.blockUI();
-            },
-            success: function(response) {
-                if (response) {
-                    console.log('aa');
-                } else {
-                    alert('Insert fail');
-                }
-            },
-            complete: function(){
-                $.unblockUI();
-            }
-        });
-	}).on('click', '.show-input-insert', function(){
-        $(this).hide();
-        $(".input-block-insert").show();
-    }).on('click', '.show-input-update', function(){
-		$(this).hide();
-        $(".input-block-update").show();
-	}).on('click', '.ajax', function(){
-		action = 'get_ajax';
-        $.ajax({
-             url: 'home.php',
-			 method: 'post',
-             data: {
-                 action: action
-             },
-             dataType: 'html',
-			 success: function(res){
-				 $("#ajax").html(res);
-			 }
-		});
-    }).on('click', '#li_1', function() {
-		alert('www');
+			$.ajax({
+				url: 'home.php',
+				method: 'post',
+				dataType: 'json',
+				data: {
+					action: action,
+					email: $('.input-block-update input[name="email"]').val(),
+					pwd: $('.input-block-update input[name="pwd"]').val(),
+					name: $('.input-block-update input[name="name"]').val(),
+					addr: $('.input-block-update input[name="addr"]').val(),
+					phone: $('.input-block-update input[name="phone"]').val(),
+					identity: $('.input-block-update input[name="identity"]').val()
+				},
+				beforeSend:function(res){
+					$.blockUI();
+				},
+				success: function(response) {
+					if (response) {
+						console.log('aa');
+					} else {
+						alert('Insert fail');
+					}
+				},
+				complete: function(){
+					$.unblockUI();
+				}
+			});
+		}).on('click', '.show-input-insert', function(){
+			$(this).hide();
+			$(".input-block-insert").show();
+		}).on('click', '.show-input-update', function(){
+			$(this).hide();
+			$(".input-block-update").show();
+		}).on('click', '.ajax', function(){
+			action = 'get_ajax';
+			$.ajax({
+				url: 'home.php',
+				method: 'post',
+				data: {
+					action: action
+				},
+				dataType: 'html',
+				success: function(res){
+					$("#ajax").html(res);
+				}
+			});
+		}).on('click', '#li_1', function() {
+			alert('www');
+		})
+
+
+
 	})
-
-
-
-})
 
 </script>
