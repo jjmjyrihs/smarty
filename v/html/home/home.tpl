@@ -7,7 +7,7 @@
 
     <body >
 		<marquee direction="up" scrollamount="10" style="width: 310px;height: 300px" id="">
-			<a href="#"><span style="font-size:20px">南南東 南南東 南南東 南南東</span></a><br />
+			<a href="#"><span style="font-size:20px">南南asdf東 南南東 南南東 南南東</span></a><br />
 			<a href="#"><span style="font-size:20px">南南東 南南東 南南東 南南東</span></a><br />
 			<a href="#"><span style="font-size:20px">南南東 南南東 南南東 南南東</span></a><br />
 			<a href="#"><span style="font-size:20px">南南東 南南東 南南東 南南東</span></a><br />
